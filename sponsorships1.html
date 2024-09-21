@@ -34,6 +34,7 @@
 
     <link href="css/shortcode.css" rel="stylesheet">
     <link href="js/dl-menu/component.css" rel="stylesheet">
+    <link href="js/dl-menu/component.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <!-----------------Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -135,11 +136,64 @@
                 </p>
                 <P style="font-size:20px;">We call upon sponsors to partner with us and sponsor these children because
                     we usually have new ones that come in for support. We would like you to take this opportunity and
-                    Check out the stories of some of our children. Please Sign up today and change a life today.</P>
+                    Check out the stories of some of our children. Please Sign up today and change a life today.</P><br>
 
             </div>
         </section>
         <!--PROGRESS SECTION one END-->
+
+         <!--BUY TEMPLATE SECTION START-->
+         <section class="news-subscription">
+            <div class="container">
+                <!--HEADER SECTION START-->
+                <style>
+                    .circle-data {
+                      display: flex;
+                      flex-direction: row;
+                      justify-content: center;
+                    }
+      
+                    @media (max-width: 768px) {
+                      .circle-data {
+                        flex-direction: column;
+                      }
+                      .circle-wrap .title-skill {
+                        margin-left: 0;
+                      }
+                      .circle-wrap li {
+                        width: 100%;
+                      }
+                    }
+                  </style>
+                <div class="heading heading-4">
+                    <p style="color:#fff">Sponsoring a child costs $50 per month</p>
+                    <h2 style="color:#fff">Break down of the $50 for Sponsorship</h2>
+                </div>
+                <!--HEADER SECTION END-->
+                <ul class="circle-wrap" style="margin-left: 25%;">
+                    <li>
+                        <div class="circle-progress" data-percent="30"></div><span
+                            class="title-skill">Education</span>
+                    </li>
+                    <li>
+                        <div class="circle-progress" data-percent="10"></div><span class="title-skill">Medical Care</span>
+                    </li>
+                </ul>
+                <ul class="circle-wrap" style="margin-left: 25%;">
+                    <li>
+                        <div class="circle-progress" data-percent="5"></div><span class="title-skill">Scholastic materials</span>
+                    </li>
+                    <li>
+                        <div class="circle-progress" data-percent="5"></div><span class="title-skill">Transport for school</span>
+                    </li>
+                   
+                </ul>
+
+            </div>
+        </section>
+
+        
+        <!--BUY TEMPLATE SECTION END-->
 
         <!--CONTENT START-->
         <div class="content">
@@ -366,12 +420,14 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.bxslider.min.js"></script>
     <script src="js/bootstrap-slider.js"></script>
+    <script src="js/jquery.circlechart.js"></script>
     <script src="js/waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/bg-moving.js"></script>
     <script src="js/dl-menu/modernizr.custom.js"></script>
     <script src="js/dl-menu/jquery.dlmenu.js"></script>
     <script src="js/functions.js"></script>
+    <script src="js/load.js"></script>
 </body>
 
 </html>
