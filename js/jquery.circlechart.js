@@ -38,14 +38,17 @@
 					    'background-color': defaults.coverBg
 					},
 					percent: {
-						'display':'block',
+						// 'display':'block',
+						'display': 'flex',
+						'justify-content': 'center',
+						'align-items': 'center',
 						'width': defaults.diameter,
 					    'height': defaults.diameter,
-					    'line-height': defaults.diameter + 'px',
 					    'vertical-align': 'middle',
-					    'font-size': defaults.percentSize,
+					    'font-size': 25,
 					    'font-weight': defaults.percentWeight,
 					    'color': defaults.fillColor
+						
                     }
 				};
 			
@@ -57,10 +60,11 @@
 				that.each(function(){
 					var $this = $(this),
 					    //we need to check for a percent otherwise set to 0;
+						text = $this.data('text').replace(/\s+/g, '<br>'),
 						perc = Math.round($this.data('percent')), //get the percentage from the element
 						deg = perc * 3.6,
 						stop = options.animate ? 0 : deg,
-						$chart = $(template.replace('{{percentage}}',perc+'%'));
+						$chart = $(template.replace('{{percentage}}',text));
 						//set all of the css properties forthe chart
 						$chart.css(styles.cirContainer).find('.ab').css(styles.cir).find('.cir').css(styles.cirCover).find('.perc').css(styles.percent);
 					

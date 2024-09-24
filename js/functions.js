@@ -134,7 +134,7 @@ jQuery(document).ready(function($){
           coverBg: '#fff',
           bgColor: '#efefef',
           fillColor: '#CC3367',
-          percentSize: '10px',          
+          percentSize: '20px',          
         });
     }
 
