@@ -1,0 +1,328 @@
+// File: popup-donation.js
+// This creates a popup donation ad that appears when the page loads
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Create the popup HTML structure
+    const popupHTML = `
+      <div class="td-popup-overlay" id="donationPopup">
+        <div class="td-popup-container">
+          <div class="td-popup-header">
+            <h2><span class="td-urgent-badge">URGENT</span> Help Timothy Recover</h2>
+            <button class="td-close-btn" id="closePopup">&times;</button>
+          </div>
+          <div class="td-popup-image">
+            <img src="/images/timothy.png" alt="Timothy Kyamulesire from Hopeful Children's Ministries Uganda">
+          </div>
+          <div class="td-popup-content">
+            <p>Last year, my good friend and one of the directors of <span class="td-highlight">Hopeful Children's Ministries</span> which is found in Uganda, Timothy Kyamulesire is part of changing lives but recently he was battling and recovered from liver disease.</p>
+            
+            <p>Unfortunately, he is now facing a new and serious health issue. He has developed a <span class="td-highlight">tumor in his right pelvic/hip area</span> that is discharging an abscess. It's painful and dangerous, and doctors say he urgently needs treatment—, surgery to drain the abscess.</p>
+            
+            <p>This ministry that Timothy works for looks after children who are a result of incest and also empowers women so that they can fend for them selves.</p>
+            
+            <p>The estimated cost for everything is <span class="td-highlight">$3,400 USD</span>. He can't manage this alone, and we are humbly asking for your support in any way you can.</p>
+            
+            <p><strong>Your help could literally save his life.</strong></p>
+            
+            <p>Thank you so much...</p>
+            
+            <a class="td-donate-btn" href='donations.html'>DONATE NOW</a>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    // Create a style element for the popup
+    const popupStyle = document.createElement('style');
+    popupStyle.textContent = `
+      /* Overlay background */
+      .td-popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+      
+      /* Popup container */
+      .td-popup-container {
+        background-color: #ffffff;
+        width: 90%;
+        max-width: 600px;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        position: relative;
+        border: 3px solid #2e8b57;
+      }
+      
+      /* Green header */
+      .td-popup-header {
+        background-color: #2e8b57;
+        color: white;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      
+      .td-popup-header h2 {
+        margin: 0;
+        font-size: 20px;
+      }
+      
+      /* Close button */
+      .td-close-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      /* Image container */
+      .td-popup-image {
+        width: 100%;
+        height: 250px;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      
+      .td-popup-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        }
+      
+      /* Content */
+      .td-popup-content {
+        padding: 20px;
+        color: #333;
+        line-height: 1.6;
+      }
+      
+      /* Donate button */
+      .td-donate-btn {
+        background-color: #2e8b57;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block;
+        margin: 10px auto 20px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+      
+      .td-donate-btn:hover {
+        background-color: #1d6540;
+      }
+  
+      /* Highlight text */
+      .td-highlight {
+        color: #2e8b57;
+        font-weight: bold;
+      }
+  
+      /* Urgent badge */
+      .td-urgent-badge {
+        background-color: #ff6b6b;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 10px;
+      }
+    `;
+    
+    // Add the style to the head
+    document.head.appendChild(popupStyle);
+    
+    // Create a div to hold the popup
+    const popupDiv = document.createElement('div');
+    popupDiv.id = 'donationPopupContainer';
+    popupDiv.innerHTML = popupHTML;
+    
+    // Add the popup to the body
+    document.body.appendChild(popupDiv);
+    
+    // Wait a moment before showing the popup for better user experience
+    setTimeout(function() {
+      document.getElementById('donationPopup').style.display = 'flex';
+    }, 1000);
+    
+    // Close popup when close button is clicked
+    document.getElementById('closePopup').addEventListener('click', function() {
+      document.getElementById('donationPopup').style.display = 'none';
+    });
+    
+    // Donate button action (this would be connected to a payment processor in production)
+    document.getElementById('popupDonateBtn').addEventListener('click', function() {
+      alert('Thank you for your willingness to donate! You would be redirected to a secure payment page.');
+      // In a real implementation, this would redirect to a payment processor
+    });
+  });
+  
+  // File: inline-donation.js
+  // This creates an inline donation ad that can be placed anywhere in your HTML
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    // Find all elements with class 'donation-ad-container'
+    const containers = document.querySelectorAll('.donation-ad-container');
+    
+    // Exit if no containers are found
+    if (containers.length === 0) return;
+    
+    // Create a style element for the inline ad
+    const inlineStyle = document.createElement('style');
+    inlineStyle.textContent = `
+      .td-inline-container {
+      height: 40em;
+        background-color: #ffffff;
+        border: 3px solid #2e8b57;
+        border-radius: 8px;
+        margin: 20px 0;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      
+      .td-inline-header {
+        background-color: #2e8b57;
+        color: white;
+        padding: 12px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .td-inline-header h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+      
+      .td-inline-content {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      @media (min-width: 768px) {
+        .td-inline-content {
+          flex-direction: row;
+        }
+      }
+      
+      .td-inline-image {
+        flex: 1;
+        min-height: 200px;
+        max-width: 100%;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      
+      @media (min-width: 768px) {
+        .td-inline-image {
+          max-width: 250px;
+        }
+      }
+      
+      .td-popup-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        }
+        
+      .td-inline-text {
+        flex: 2;
+        padding: 15px;
+        color: #333;
+        line-height: 1.5;
+      }
+      
+      .td-inline-donate-btn {
+        background-color: #2e8b57;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-top: 10px;
+        transition: background-color 0.3s;
+      }
+      
+      .td-inline-donate-btn:hover {
+        background-color: #1d6540;
+      }
+      
+      .td-inline-highlight {
+        color: #2e8b57;
+        font-weight: bold;
+      }
+      
+      .td-inline-urgent {
+        background-color: #ff6b6b;
+        color: white;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 8px;
+      }
+    `;
+    
+    // Add the style to the head
+    document.head.appendChild(inlineStyle);
+    
+    // HTML for the inline ad
+    const inlineHTML = `
+      <div class="td-inline-container">
+        <div class="td-inline-header">
+          <h3><span class="td-inline-urgent">URGENT</span> Help Timothy Recover</h3>
+        </div>
+        <div class="td-inline-content">
+          <div class="td-inline-image">
+            <img src="/images/timothy.png" alt="Timothy Kyamulesire from Hopeful Children's Ministries Uganda">
+          </div>
+          <div class="td-inline-text">
+            <p>Timothy Kyamulesire, a director at <span class="td-inline-highlight">Hopeful Children's Ministries</span> in Uganda, urgently needs surgery for a tumor in his pelvic area that's causing a dangerous abscess.</p>
+            <p>The estimated cost is <span class="td-inline-highlight">$3,400 USD</span>. Timothy's ministry cares for children born of incest and empowers women. Your support could save his life.</p>
+            <a class="td-inline-donate-btn" href='donations.html'>DONATE NOW</a>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    // Insert the inline ad into each container
+    containers.forEach(container => {
+      container.innerHTML = inlineHTML;
+    });
+    
+    // Add event listeners to all donate buttons
+    
+  });

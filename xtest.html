@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Popup</title>
+  <style>
+    /* Overlay background */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    
+    /* Popup container */
+    .popup-container {
+      background-color: #ffffff;
+      width: 90%;
+      max-width: 600px;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+      border: 3px solid #2e8b57;
+    }
+    
+    /* Green header */
+    .popup-header {
+      background-color: #2e8b57;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    
+    .popup-header h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+    
+    /* Close button */
+    .close-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Image container */
+    .popup-image {
+      width: 100%;
+      height: 220px;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+    .popup-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    /* Content */
+    .popup-content {
+      padding: 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    /* Donate button */
+    .donate-btn {
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: block;
+      margin: 10px auto 20px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .donate-btn:hover {
+      background-color: #1d6540;
+    }
+
+    /* Highlight text */
+    .highlight {
+      color: #2e8b57;
+      font-weight: bold;
+    }
+
+    /* Urgent badge */
+    .urgent-badge {
+      background-color: #ff6b6b;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: bold;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="popup-overlay" id="donationPopup">
+    <div class="popup-container">
+      <div class="popup-header">
+        <h2><span class="urgent-badge">URGENT</span> Help Timothy Recover</h2>
+        <button class="close-btn" id="closePopup">&times;</button>
+      </div>
+      <div class="popup-image">
+        <img src="/api/placeholder/600/320" alt="Timothy Kyamulesire from Hopeful Children's Ministries Uganda">
+      </div>
+      <div class="popup-content">
+        <p>Last year, my good friend and one of the directors of <span class="highlight">Hopeful Children's Ministries</span> which is found in Uganda, Timothy Kyamulesire is part of changing lives but recently he was battling and recovered from liver disease.</p>
+        
+        <p>Unfortunately, he is now facing a new and serious health issue. He has developed a <span class="highlight">tumor in his right pelvic/hip area</span> that is discharging an abscess. It's painful and dangerous, and doctors say he urgently needs treatment—, surgery to drain the abscess.</p>
+        
+        <p>This ministry that Timothy works for looks after children who are a result of incest and also empowers women so that they can fend for them selves.</p>
+        
+        <p>The estimated cost for everything is <span class="highlight">$3,400 USD</span>. He can't manage this alone, and we are humbly asking for your support in any way you can.</p>
+        
+        <p><strong>Your help could literally save his life.</strong></p>
+        
+        <p>Thank you so much...</p>
+        
+        <button class="donate-btn" id="donateBtn">DONATE NOW</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Show popup when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      // Wait a moment before showing the popup for better user experience
+      setTimeout(function() {
+        document.getElementById('donationPopup').style.display = 'flex';
+      }, 1000);
+    });
+    
+    // Close popup when close button is clicked
+    document.getElementById('closePopup').addEventListener('click', function() {
+      document.getElementById('donationPopup').style.display = 'none';
+    });
+    
+    // Donate button action (this would be connected to a payment processor in production)
+    document.getElementById('donateBtn').addEventListener('click', function() {
+      alert('Thank you for your willingness to donate! You would be redirected to a secure payment page.');
+      // In a real implementation, this would redirect to a payment processor
+    });
+  </script>
+</body>
+</html>
