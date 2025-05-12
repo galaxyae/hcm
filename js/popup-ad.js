@@ -13,21 +13,21 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="td-popup-image">
             <img src="/images/timothy.png" alt="Timothy Kyamulesire from Hopeful Children's Ministries Uganda">
           </div>
-          <div class="td-popup-content">
-            <p>Last year, my good friend and one of the directors of <span class="td-highlight">Hopeful Children's Ministries</span> which is found in Uganda, Timothy Kyamulesire is part of changing lives but recently he was battling and recovered from liver disease.</p>
-            
-            <p>Unfortunately, he is now facing a new and serious health issue. He has developed a <span class="td-highlight">tumor in his right pelvic/hip area</span> that is discharging an abscess. It's painful and dangerous, and doctors say he urgently needs treatment—, surgery to drain the abscess.</p>
-            
-            <p>This ministry that Timothy works for looks after children who are a result of incest and also empowers women so that they can fend for them selves.</p>
-            
-            <p>The estimated cost for everything is <span class="td-highlight">$3,400 USD</span>. He can't manage this alone, and we are humbly asking for your support in any way you can.</p>
-            
-            <p><strong>Your help could literally save his life.</strong></p>
-            
-            <p>Thank you so much...</p>
-            
-            <a class="td-donate-btn" href='donations.html'>DONATE NOW</a>
-          </div>
+          
+<div class="td-popup-content">
+  <p>Last year, my good friend and one of the directors of <span class="td-highlight">Hopeful Children's Ministries</span> in Uganda, Timothy Kyamulesire, was battling liver disease, but thankfully he recovered.</p>
+  
+  <p>Unfortunately, he is now facing a new and serious health issue. He has developed a <span class="td-highlight">tumor in his right pelvic/hip area</span> that is discharging an abscess. It's painful and dangerous, and doctors say he urgently needs surgery to drain the abscess.</p>
+  
+  <p>The estimated cost for everything is <span class="td-highlight">$3,400 USD</span>. He can't manage this alone, and we are humbly asking for your support in any way you can.</p>
+  
+  <p><strong>Your help could literally save his life</strong> in the way he works daily to save the lives of the children and women entrusted to Hopeful Children's Ministries.</p>
+  
+  <p>Thank you so much in advance for your consideration and donation.</p>
+  
+  <a class="td-donate-btn" href='donations.html'>DONATE NOW</a>
+</div>
+
         </div>
       </div>
     `;
@@ -310,10 +310,10 @@ document.addEventListener('DOMContentLoaded', function() {
             <img src="/images/timothy.png" alt="Timothy Kyamulesire from Hopeful Children's Ministries Uganda">
           </div>
           <div class="td-inline-text">
-            <p>Timothy Kyamulesire, a director at <span class="td-inline-highlight">Hopeful Children's Ministries</span> in Uganda, urgently needs surgery for a tumor in his pelvic area that's causing a dangerous abscess.</p>
-            <p>The estimated cost is <span class="td-inline-highlight">$3,400 USD</span>. Timothy's ministry cares for children born of incest and empowers women. Your support could save his life.</p>
-            <a class="td-inline-donate-btn" href='donations.html'>DONATE NOW</a>
-          </div>
+  <p>Timothy Kyamulesire, a director at <span class="td-inline-highlight">Hopeful Children's Ministries</span> in Uganda, urgently needs surgery for a tumor in his pelvic area that's causing a dangerous abscess.</p>
+  <p>The estimated cost is <span class="td-inline-highlight">$3,400 USD</span>. Your support could save his life as he works daily to save the lives of children and women through Hopeful Children's Ministries.</p>
+  <a class="td-inline-donate-btn" href='donations.html'>DONATE NOW</a>
+</div>
         </div>
       </div>
     `;
