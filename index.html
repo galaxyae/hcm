@@ -33,7 +33,6 @@
     <link href="js/dl-menu/component.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/widget.css" rel="stylesheet">
-    <script src="js/popup-ad.js"></script>
 
     <!-----------------Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -41,11 +40,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="images/site.webmanifest">
     <!-------------------Favicon-->
+    
 
 
 </head>
 
 <body>
+  <script>
+    const script = document.createElement('script');
+script.src = `js/popup-ad.js?v=${new Date().getTime()}`;
+document.head.appendChild(script);
+  </script>
     <!--WRAPPER START-->
     <div class="wrapper">
         <!--HEADER START-->
