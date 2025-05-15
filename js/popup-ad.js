@@ -1,8 +1,4 @@
-// File: popup-donation.js
-// This creates a popup donation ad that appears when the page loads
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Create the popup HTML structure
     const popupHTML = `
       <div class="td-popup-overlay" id="donationPopup">
         <div class="td-popup-container">
@@ -32,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     `;
     
-    // Create a style element for the popup
     const popupStyle = document.createElement('style');
     popupStyle.textContent = `
       /* Overlay background */
