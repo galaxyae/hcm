@@ -1,3 +1,4 @@
+console.log('DOMContentLoaded');
 document.addEventListener('DOMContentLoaded', function() {
     const popupHTML = `
       <div class="td-popup-overlay" id="donationPopup">
