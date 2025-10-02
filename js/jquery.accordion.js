@@ -4,7 +4,7 @@
  * This plugin provides an accordion with cookie support.
  *
  * Copyright (c) 2011 John Snyder (snyderplace.com)
- * @license https://www.snyderplace.com/accordion/license.txt New BSD
+ * @license http://www.snyderplace.com/accordion/license.txt New BSD
  * @version 1.1
  */
 (function($) {

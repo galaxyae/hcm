@@ -2,10 +2,10 @@
  * bootstrap-progressbar v0.8.1 by @minddust
  * Copyright (c) 2012-2014 Stephan Groß
  *
- * https://www.minddust.com/project/bootstrap-progressbar/
+ * http://www.minddust.com/project/bootstrap-progressbar/
  *
  * Licensed under the MIT license:
- * https://www.opensource.org/licenses/MIT
+ * http://www.opensource.org/licenses/MIT
  */
 (function($) {
 

@@ -1,12 +1,12 @@
 /**
  * jquery.dlmenu.js v1.0.1
- * https://www.codrops.com
+ * http://www.codrops.com
  *
  * Licensed under the MIT license.
- * https://www.opensource.org/licenses/mit-license.php
+ * http://www.opensource.org/licenses/mit-license.php
  * 
  * Copyright 2013, Codrops
- * https://www.codrops.com
+ * http://www.codrops.com
  */
 ;( function( $, window, undefined ) {
 
